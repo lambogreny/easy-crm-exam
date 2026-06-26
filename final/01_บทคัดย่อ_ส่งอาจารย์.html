@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<script>(function(){var ua=navigator.userAgent||"";if(/Line/i.test(ua)&&location.search.indexOf("openExternalBrowser")===-1){location.replace(location.href+(location.href.indexOf("?")>-1?"\&":"?")+"openExternalBrowser=1");}})();</script>
+<title>บทคัดย่อสถานการณ์จำลอง — Easy CRM</title>
+<style>
+  @font-face{ font-family:'Sarabun'; src:url('fonts/Sarabun-Regular.ttf') format('truetype'); font-weight:400; font-display:swap; }
+  @font-face{ font-family:'Sarabun'; src:url('fonts/Sarabun-Bold.ttf') format('truetype'); font-weight:700; font-display:swap; }
+  @font-face{ font-family:'Sarabun'; src:url('fonts/Sarabun-ExtraBold.ttf') format('truetype'); font-weight:800; font-display:swap; }
+
+  :root{ --navy:#1f3a5f; --ink:#1a1a1a; --muted:#555; --line:#bcbcbc; }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html{ background:#e4e4e4; }
+  body{
+    font-family:'Sarabun',sans-serif; color:var(--ink); line-height:1.5;
+    padding:22px 0; word-break:normal; overflow-wrap:break-word; line-break:normal;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  }
+  @page{ size:A4 portrait; margin:0; }
+
+  .sheet{
+    width:210mm; height:297mm; margin:0 auto; background:#fff;
+    box-shadow:0 1px 6px rgba(0,0,0,.15);
+    position:relative; overflow:hidden; font-size:8.9pt;
+    display:flex; flex-direction:column;
+  }
+  .inner{ padding:11mm 16mm 11mm 18mm; flex:1; display:flex; flex-direction:column; }
+
+  header{ text-align:center; padding-bottom:5pt; margin-bottom:8pt; border-bottom:2px solid var(--navy); }
+  header h1{ font-size:18pt; font-weight:800; color:var(--navy); line-height:1.05; }
+  header .sub{ font-size:9.5pt; color:var(--muted); margin-top:1pt; }
+
+  .meta{ font-size:9pt; color:#333; margin-bottom:8pt; padding-bottom:7pt; border-bottom:1px solid var(--line); }
+  .meta div{ margin-bottom:1.5pt; }
+  .meta b{ color:var(--ink); font-weight:700; }
+
+  .part{ margin-bottom:8pt; }
+  h2{ font-size:11pt; font-weight:700; color:var(--navy); margin-bottom:4pt; }
+
+  p{ text-indent:1cm; margin-bottom:4pt; text-align:left; color:#1f1f1f; }
+
+  table{ width:100%; border-collapse:collapse; font-size:8.8pt; margin:5pt 0; break-inside:avoid; }
+  .cap{ font-size:8pt; color:var(--muted); margin-bottom:3pt; }
+  thead th{ border-top:1.3px solid var(--navy); border-bottom:1.3px solid var(--navy);
+            color:var(--navy); font-weight:700; padding:3pt 9pt; text-align:left; }
+  thead th:last-child{ text-align:right; width:30%; }
+  tbody td{ padding:2.8pt 9pt; border-bottom:1px solid var(--line); }
+  td.n{ text-align:right; white-space:nowrap; font-weight:600; }
+
+  .note{ border:none; border-left:2px solid var(--navy); padding:2pt 0 2pt 11pt; margin:5pt 0;
+         text-align:left; break-inside:avoid; }
+  .note b{ color:var(--ink); }
+
+  ul.tight{ margin:4pt 0 4pt 1.1cm; }
+  ul.tight li{ margin-bottom:3.5pt; text-align:left; }
+  ul.tight li b{ color:var(--ink); }
+
+  footer{ margin-top:auto; padding-top:6pt; border-top:1px solid var(--navy);
+          font-size:8.5pt; color:var(--muted); text-align:center; }
+
+  @media print{
+    html,body{ background:#fff; margin:0; padding:0; }
+    .sheet{ box-shadow:none; margin:0; width:210mm; height:297mm; overflow:hidden; }
+    *{ -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+ <div class="inner">
+
+  <header>
+    <h1>Easy CRM</h1>
+    <div class="sub">ระบบบริหารความสัมพันธ์ลูกค้าสำหรับร้านค้าขนาดเล็กของไทย</div>
+  </header>
+
+  <div class="meta">
+    <div><b>บทบาทสมมติ</b>&nbsp;&nbsp;ผู้ก่อตั้งและผู้บริหารกิจการสตาร์ตอัป</div>
+    <div><b>ประเภทธุรกิจ</b>&nbsp;&nbsp;ซอฟต์แวร์ให้บริการ (SaaS) ด้านการบริหารความสัมพันธ์ลูกค้า</div>
+    <div><b>แนวคิดหลัก</b>&nbsp;&nbsp;รักษาลูกค้าเก่าให้กลับมาซื้อซ้ำ คือหนทางที่ร้านเล็กแข่งกับรายใหญ่ได้</div>
+  </div>
+
+  <div class="part">
+    <h2>ส่วนที่ 1&nbsp;&nbsp;&nbsp;ธุรกิจและปัญหาที่เกิดขึ้น</h2>
+    <p>
+      Easy CRM เป็นระบบบริหารความสัมพันธ์ลูกค้าราคาย่อมเยาสำหรับร้านค้าขนาดเล็ก ทำหน้าที่จัดเก็บข้อมูลลูกค้า
+      ระบบสะสมแต้ม การส่งโปรโมชันซ้ำโดยอัตโนมัติ และการวิเคราะห์พฤติกรรมการซื้อ โดยเชื่อมต่อกับ LINE Official
+      Account และเบอร์โทรศัพท์ซึ่งเป็นช่องทางที่คนไทยคุ้นเคย ร้านสามารถติดตั้งและเริ่มใช้งานได้เองภายในหนึ่งวัน
+    </p>
+    <p>
+      ปัญหาที่พบทั่วไปคือร้านค้าขนาดเล็กจำนวนมากยังไม่รู้จักระบบ CRM และบางส่วนยังไม่เข้าใจว่าคืออะไร จึงไม่ได้
+      เก็บข้อมูลของลูกค้าไว้อย่างเป็นระบบ เมื่อขายผ่านเงินสดหรือแพลตฟอร์มของผู้อื่น ร้านจึงไม่รู้ว่าใครคือลูกค้าประจำ
+      ใครซื้อบ่อย หรือใครเริ่มห่างหายไป และเมื่อไม่มีช่องทางติดต่อก็ไม่อาจชวนลูกค้าให้กลับมาซื้อซ้ำได้ ผลคือ
+      ผู้ประกอบการทุ่มงบไปกับการหาลูกค้าใหม่ตลอดเวลา แต่กลับปล่อยให้ลูกค้าเก่าที่เคยอุดหนุนค่อย&nbsp;ๆ หายไป
+    </p>
+  </div>
+
+  <div class="part">
+    <h2>ส่วนที่ 2&nbsp;&nbsp;&nbsp;วิเคราะห์สาเหตุและคุณค่าของการรักษาลูกค้าเก่า</h2>
+    <p>
+      เมื่อวิเคราะห์ลึกลงไปจะพบว่าปัญหาที่แท้จริงไม่ได้อยู่ที่การหาลูกค้าใหม่ไม่เก่ง แต่อยู่ที่การไม่มีเครื่องมือสำหรับ
+      รักษาลูกค้าเก่า ทั้งที่ลูกค้ากลุ่มนี้คือแหล่งกำไรที่คุ้มค่าที่สุด ดังที่งานวิจัยในระดับสากลยืนยันตรงกัน
+    </p>
+    <div class="cap">ข้อมูลสนับสนุน อ้างอิงจาก Bain &amp; Company และ Harvard Business Review</div>
+    <table>
+      <thead><tr><th>ประเด็น</th><th>ตัวเลข</th></tr></thead>
+      <tbody>
+        <tr><td>ต้นทุนการหาลูกค้าใหม่เทียบกับการรักษาลูกค้าเก่า</td><td class="n">สูงกว่า 5–25 เท่า</td></tr>
+        <tr><td>การเพิ่มอัตราการรักษาลูกค้า 5% ส่งผลต่อกำไร</td><td class="n">เพิ่มขึ้น 25–95%</td></tr>
+        <tr><td>โอกาสปิดการขายกับลูกค้าเก่าเทียบกับลูกค้าใหม่</td><td class="n">60–80% ต่อ 5–20%</td></tr>
+        <tr><td>มูลค่าการใช้จ่ายของลูกค้าที่ซื้อซ้ำเทียบกับลูกค้าใหม่</td><td class="n">มากกว่าราว 67%</td></tr>
+      </tbody>
+    </table>
+    <p>
+      ประเด็นนี้สำคัญยิ่งขึ้นในปัจจุบันจากสองเรื่อง เรื่องแรกคือต้นทุนค่าโฆษณาออนไลน์ที่สูงขึ้นต่อเนื่องตามการแข่งขัน
+      ทำให้การพึ่งพาการหาลูกค้าใหม่อย่างเดียวเหลือกำไรน้อยลง เรื่องที่สองคือกฎหมายคุ้มครองข้อมูลส่วนบุคคล หรือ PDPA
+      ที่เข้มงวดขึ้น เมื่อการเข้าถึงลูกค้าผ่านการซื้อโฆษณาทั้งยากและแพงกว่าเดิม การที่ร้านมีฐานข้อมูลลูกค้าเป็นของตนเอง
+      เช่น เบอร์โทรศัพท์และบัญชี LINE ที่ลูกค้ายินยอมให้ไว้ จึงกลายเป็นสินทรัพย์ที่มีค่า เพราะร้านติดต่อลูกค้าได้โดยตรง
+      ตรงกลุ่ม และถูกต้องตามกฎหมาย
+    </p>
+    <div class="note">
+      <b>โอกาสของตลาด</b>&nbsp;&nbsp;ประเทศไทยมีผู้ประกอบการขนาดกลางและขนาดย่อมราว 3.25 ล้านราย คิดเป็นการจ้างงาน
+      เกือบ 69% ของประเทศ แต่ส่วนใหญ่ยังไม่มีระบบ CRM ใช้งาน ประกอบกับคนไทยใช้ LINE สูงถึง 56 ล้านคน และบัญชี
+      LINE Official Account กว่าเก้าในสิบเป็นของผู้ประกอบการรายย่อย อีกทั้งเวลานี้ร้านค้าจำนวนมากเริ่มเข้าใจและให้
+      ความสำคัญกับ CRM มากขึ้นกว่าแต่ก่อนอย่างชัดเจน ตลาดนี้จึงทั้งกว้างและพร้อมเติบโต
+    </div>
+  </div>
+
+  <div class="part">
+    <h2>ส่วนที่ 3&nbsp;&nbsp;&nbsp;แนวทางแก้ไขและโอกาสในการพัฒนาธุรกิจ</h2>
+    <p>
+      Easy CRM ออกแบบให้สอดคล้องกับพฤติกรรมจริงของคนไทย ลูกค้าเพียงแจ้งเบอร์โทรศัพท์หรือสแกนคิวอาร์โค้ดผ่าน
+      LINE ก็สมัครสมาชิกได้ทันทีโดยไม่ต้องติดตั้งแอปพลิเคชันใหม่ ร้านจึงมีฐานข้อมูลของตนเองและสื่อสารกับลูกค้าได้
+      โดยตรงในต้นทุนที่ต่ำกว่าการซื้อโฆษณา จุดที่สร้างความผูกพันคือระบบจดจำวันเกิดและเมนูที่ลูกค้าชื่นชอบ เพื่อมอบ
+      สิทธิพิเศษเฉพาะบุคคล ทำให้ลูกค้ารู้สึกได้รับการจดจำและเอาใจใส่ ซึ่งเป็นความผูกพันที่คู่แข่งลอกเลียนได้ยาก
+      เปรียบได้กับร้านค้าในย่านเดิมที่เจ้าของจำลูกค้าได้ทุกคน แต่ทำให้เป็นระบบอัตโนมัติที่รองรับลูกค้าจำนวนมาก
+    </p>
+    <ul class="tight">
+      <li><b>การใช้งานเชิงรุก</b> เปลี่ยนลูกค้าขาจรให้เป็นลูกค้าประจำผ่านการสะสมแต้มและโปรโมชันเฉพาะกลุ่ม เพื่อกระตุ้นยอดซื้อและเพิ่มมูลค่าต่อบิล</li>
+      <li><b>การใช้งานเชิงรับ</b> แจ้งเตือนเมื่อลูกค้าคนสำคัญเริ่มห่างหายไป เพื่อให้ร้านดึงกลับมาได้ก่อนสูญเสียให้คู่แข่ง โดยเฉพาะในยามที่เศรษฐกิจชะลอตัวหรือมีคู่แข่งรายใหม่เข้ามา</li>
+      <li><b>กลยุทธ์การวางตำแหน่ง</b> ใช้แนวคิด Blue Ocean และ Disruptive Innovation เจาะกลุ่มร้านรายย่อยที่ผู้ให้บริการรายใหญ่มองข้าม ด้วยผลิตภัณฑ์ที่เรียบง่ายและราคาเข้าถึงได้</li>
+      <li><b>ทฤษฎีและตัวชี้วัด</b> วิเคราะห์ตลาดด้วย Five Forces ของ Porter ร่วมกับ SWOT ออกแบบรายได้ตามแนว Lean Startup ตั้งเป้าอัตราส่วนมูลค่าตลอดอายุลูกค้าต่อต้นทุนการหาลูกค้าไม่ต่ำกว่า 3 ต่อ 1 และอัตราการเลิกใช้บริการต่ำกว่า 5% ต่อเดือน</li>
+    </ul>
+  </div>
+
+  <footer>Easy CRM&nbsp;&nbsp;|&nbsp;&nbsp;ทำให้ร้านเล็กมีพลังของข้อมูลเทียบเท่าร้านใหญ่</footer>
+
+ </div>
+</div>
+{BTN}
+</body>
+</html>
