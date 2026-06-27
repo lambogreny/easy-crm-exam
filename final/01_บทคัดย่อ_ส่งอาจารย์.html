@@ -13,7 +13,7 @@
   *{ margin:0; padding:0; box-sizing:border-box; }
   html{ background:#e4e4e4; }
   body{
-    font-family:'Sarabun',sans-serif; color:var(--ink); line-height:1.6;
+    font-family:'Sarabun',sans-serif; color:var(--ink); line-height:1.7;
     padding:22px 0; word-break:normal; overflow-wrap:break-word; line-break:normal;
     -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
   }
@@ -22,7 +22,7 @@
   .sheet{
     width:210mm; height:297mm; margin:0 auto; background:#fff;
     box-shadow:0 1px 6px rgba(0,0,0,.15);
-    position:relative; overflow:hidden; font-size:7.9pt;
+    position:relative; overflow:hidden; font-size:7.15pt;
     display:flex; flex-direction:column;
   }
   .inner{ padding:10mm 16mm 9mm 18mm; flex:1; display:flex; flex-direction:column; }
@@ -38,10 +38,10 @@
   .meta div{ margin-bottom:1.5pt; }
   .meta b{ color:var(--ink); font-weight:700; }
 
-  .part{ margin-bottom:8pt; }
-  h2{ font-size:11pt; font-weight:700; color:var(--navy); margin-bottom:4pt; }
+  .part{ margin-bottom:13pt; }
+  h2{ font-size:13pt; font-weight:700; color:var(--navy); margin-bottom:6pt; }
 
-  p{ text-indent:1cm; margin-bottom:4pt; text-align:left; color:#1f1f1f; }
+  p{ text-indent:1cm; margin-bottom:7pt; text-align:left; color:#1f1f1f; }
 
   table{ width:100%; border-collapse:collapse; font-size:8.8pt; margin:5pt 0; break-inside:avoid; }
   .cap{ font-size:8pt; color:var(--muted); margin-bottom:3pt; }
@@ -81,7 +81,7 @@
 
   <div class="meta">
     <div><b>ชื่อ</b>&nbsp;&nbsp;บริษัท ธันเดอร์ โซลูชั่น จำกัด&nbsp;&nbsp;|&nbsp;&nbsp;629 หมู่ 6 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น 40000</div>
-    <div><b>ภูมิหลัง</b>&nbsp;&nbsp;ผู้ให้บริการบอทเช็กสลิปอัตโนมัติบน&nbsp;LINE ปัจจุบันมีผู้ใช้งานกว่า 6,000 ร้านค้า 10,000 สาขา จึงเข้าใจพฤติกรรมร้านค้าและลูกค้าบน&nbsp;LINE อย่างลึกซึ้ง</div>
+    <div><b>ภูมิหลัง</b>&nbsp;&nbsp;ผู้ให้บริการ AI เช็กสลิปอัตโนมัติบน&nbsp;LINE ช่วยป้องกันสลิปปลอมและสลิปซ้ำให้เจ้าของร้านและธุรกิจทุกรูปแบบ ปัจจุบันมีผู้ใช้งานกว่า 6,000 ร้านค้า 10,000 สาขา จึงเข้าใจพฤติกรรมร้านค้าและลูกค้าบน&nbsp;LINE อย่างลึกซึ้ง</div>
     <div><b>บทบาทสมมติ</b>&nbsp;&nbsp;ผู้ก่อตั้งและผู้บริหารกิจการ&nbsp;&nbsp;|&nbsp;&nbsp;<b>ประเภทธุรกิจ</b>&nbsp;ซอฟต์แวร์ให้บริการ (SaaS) ด้านการบริหารความสัมพันธ์ลูกค้า</div>
     <div><b>แนวคิดหลัก</b>&nbsp;&nbsp;รักษาลูกค้าเก่าให้กลับมาซื้อซ้ำ คือหนทางที่ร้านเล็กแข่งกับรายใหญ่ได้</div>
   </div>
@@ -90,10 +90,11 @@
     <h2>ส่วนที่ 1&nbsp;&nbsp;&nbsp;ธุรกิจและปัญหาที่เกิดขึ้น</h2>
     <p>
       Easy CRM พัฒนาโดยบริษัท ธันเดอร์ โซลูชั่น จำกัด ซึ่งเดิมให้บริการบอทเช็กสลิปอัตโนมัติบน&nbsp;LINE และมีผู้ใช้งานแล้ว
-      กว่า 6,000 ร้านค้า 10,000 สาขา ประสบการณ์ดูแลร้านค้าจำนวนมากบน&nbsp;LINE ทำให้เข้าใจปัญหาและพฤติกรรมของร้านเล็ก
-      อย่างแท้จริง จึงต่อยอดสู่ Easy CRM ระบบบริหารความสัมพันธ์ลูกค้าราคาย่อมเยาสำหรับร้านค้าขนาดเล็ก ทำหน้าที่จัดเก็บ
-      ข้อมูลลูกค้า ระบบสะสมแต้ม การส่งโปรโมชันซ้ำโดยอัตโนมัติ และการวิเคราะห์พฤติกรรมการซื้อ โดยเชื่อมต่อกับ LINE
-      Official Account และเบอร์โทรศัพท์ซึ่งเป็นช่องทางที่คนไทยคุ้นเคย ร้านติดตั้งและเริ่มใช้งานได้เองภายในหนึ่งวัน
+      กว่า 6,000 ร้านค้า 10,000 สาขา จึงต่อยอดความสามารถเดิมโดยตรง คือเมื่อลูกค้าส่งสลิปโอนเงินเข้ามาในไลน์ ระบบจะ
+      ตรวจสลิปและให้แต้มสะสมแก่ลูกค้าทันทีในขั้นตอนเดียว ลูกค้าจึงได้แต้มอัตโนมัติจากการจ่ายเงินที่ทำอยู่แล้ว โดยไม่ต้อง
+      สแกนหรือทำขั้นตอนเพิ่ม จากจุดนี้จึงพัฒนาเป็น Easy CRM ระบบบริหารความสัมพันธ์ลูกค้าสำหรับร้านค้าขนาดเล็ก ที่จัดเก็บ
+      ข้อมูลลูกค้า สะสมแต้ม ส่งโปรโมชันซ้ำอัตโนมัติ และวิเคราะห์พฤติกรรมการซื้อ โดยเชื่อมกับ LINE Official Account และ
+      เบอร์โทรศัพท์ซึ่งเป็นช่องทางที่คนไทยคุ้นเคย ร้านติดตั้งและเริ่มใช้งานได้เองภายในหนึ่งวัน
     </p>
     <p>
       ปัญหาที่พบทั่วไปคือร้านค้าขนาดเล็กจำนวนมากยังไม่รู้จักระบบ CRM และบางส่วนยังไม่เข้าใจว่าคืออะไร จึงไม่ได้
